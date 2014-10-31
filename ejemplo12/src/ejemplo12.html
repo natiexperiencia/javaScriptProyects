@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Los n&uacute;meros literales se pueden escribir con o sin decimales, y con o sin anotaciones cientificas(e).</p>
+
+<p id="demo"></p>
+<button type="button" onclick="miFuncion()">Literal sin</button>
+<button type="button" onclick="miFuncion2()">Literal con</button>
+<button type="button" onclick="miFuncion3()">Cient&iacute;fico</button>
+<script>
+	function miFuncion(){
+		document.getElementById("demo").innerHTML = 152;
+	}
+	function miFuncion2(){
+		document.getElementById("demo").innerHTML = 152.43;
+	}
+	function miFuncion3(){
+		document.getElementById("demo").innerHTML = 123e5;
+	}
+
+</script>
+
+</body>
+</html>
