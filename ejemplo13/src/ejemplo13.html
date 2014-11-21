@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array</h1>
+<p id="demo"></p>
+<button type="button" onclick="volver()">Primera posicion</button>
+<button type="button" onclick="miFuncion()">Segunda posicion</button>
+<button type="button" onclick="miFuncion2()">Tercera posicion</button>
+
+<script>
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo").innerHTML = cars[0];
+
+function miFuncion(){
+	document.getElementById("demo").innerHTML = cars[1];
+}
+
+function miFuncion2(){
+	document.getElementById("demo").innerHTML = cars[2];
+}
+
+function volver(){
+	document.getElementById("demo").innerHTML = cars[0];
+}
+</script>
+
+
+</body>
+</html>
