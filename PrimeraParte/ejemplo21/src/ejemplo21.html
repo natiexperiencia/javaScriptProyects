@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>Introduce algo</h2>
+	<p>Siempre nos dará tipo de valor String ya que el input recibe string. Lo engañamos al detectar que es un número</p>
+	<input id="input" width="20" />
+	<button type="button" onclick="queEs()">Que tipo es</button>
+	<button type="button" onclick="volver()">Volver</button>
+	<p id="resultado"></p>
+	<script type="text/javascript">
+		function queEs () {
+			var x;
+			x = document.getElementById('input').value;
+			if(x==""){
+				document.getElementById('resultado').innerHTML = "Escribe algo";
+			}else if(isNaN(x)){
+			document.getElementById('resultado').innerHTML = typeof x;
+			}else{
+				document.getElementById('resultado').innerHTML = "Number";
+			}
+		}
+		function volver () {
+			document.getElementById('resultado').innerHTML = "";
+		}
+	</script>
