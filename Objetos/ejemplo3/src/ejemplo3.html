@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Crear y usar un método de un objeto</p>
+
+<p>Un m&eacute;todo de un objeto es la definici&oacute;n de una funci&oacute;n guardada como valor de una propiedad</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<button type="button" onclick="mostrarCoche()">Mostrar coche</button>
+<button type="button" onclick="mostrarFuncion()">Mostrar funcion</button>
+<button type="button" onclick="volver()">Volver</button>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function(c) {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo").innerHTML = person.fullName();
+
+var coche = {
+	marca  :"VolksWagen",
+	tipo   :"Gasolina",
+	color  :"Rojo",
+	mostrar:function() {
+		return "<b>Coche:</b><br/><br/>Marca: "+this.marca+"<br/>Tipo: "+this.tipo+"<br/>Color: "+this.color;
+	}
+};
+function mostrarCoche() {
+	document.getElementById('demo2').innerHTML = coche.mostrar();
+}
+function mostrarFuncion() {
+	document.getElementById('demo3').innerHTML = coche.mostrar;
+}
+function volver() {
+	document.getElementById('demo2').innerHTML = "";
+	document.getElementById('demo3').innerHTML = "";
+}
+
+</script>
+</body>
+</html>
