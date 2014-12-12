@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Crar un objeto JavaScript</p>
+
+	<p id="demo"></p>
+	<button type="button" onclick="tipo()">Marca</button>
+	<button type="button" onclick="modelo()">Modelo</button>
+	<button type="button" onclick="color()">Color</button>
+
+	<script type="text/javascript">
+		var car = {type:"Fiat", model:500, color:"Blanco"};
+		function tipo () {
+			document.getElementById('demo').innerHTML = car.type;
+		}
+		function modelo () {
+			document.getElementById('demo').innerHTML = car.model;
+		}
+		function color () {
+			document.getElementById('demo').innerHTML = car.color;
+		}
+	</script>

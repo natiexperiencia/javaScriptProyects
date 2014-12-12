@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>En este ejemplo seg&uacute;n el bot&oacute;n clicado, la variable guardar&aacute; el valor y lo mostrar&aacute;</p>
+
+<p id="demo">Aqu&iacute; la variable clicada</p>
+<button type="button" onclick="funcion6()">Seis 6</button>
+<button type="button" onclick="funcion3()">Tres 3</button>
+<button type="button" onclick="funcion1000()">Mil 1000</button>
+<button type="button" onclick="volver()">Volver</button>
+
+<script>
+function funcion6(){
+	var length;
+	length = 6;
+	document.getElementById("demo").innerHTML = length;
+}
+function funcion3(){
+	var tres;
+	tres = 3;
+	document.getElementById("demo").innerHTML = tres;
+}
+function funcion1000(){
+	var mil;
+	mil = 1000;
+	document.getElementById("demo").innerHTML = mil;
+}
+function volver(){
+	document.getElementById("demo").innerHTML = "Aqu&iacute; la variable clicada";
+}
+</script>
+
+</body>
+</html>
