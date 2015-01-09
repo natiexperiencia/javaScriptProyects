@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>El caracter \ se utiliza para escribir caracteres especiales como ", ', nueva linea, salto, ...</h2>
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+
+var x = 'It\'s alright';
+var y = "We are the so-called \"Vikings\" from the north.";
+
+document.getElementById("demo").innerHTML = x + "<br>" + y; 
+
+var z = '\'xxx';
+var a = '\"xxx';
+var b = '\\xxx';
+var c = '\nxxx';
+var d = '\rxxx';
+var e = '\txxx';
+var f = '\bxxx';
+var g = '\fxxx';
+
+document.getElementById('demo2').innerHTML = z + '<br>' + a + '<br>' + b + '<br>' + c + '<br>' + d + '<br>' + e + '<br>' + f + '<br>' + g;
+
+</script>
+
+</body>
+</html>
