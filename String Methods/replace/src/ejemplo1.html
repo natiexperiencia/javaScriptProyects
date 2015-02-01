@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Replace</title>
+</head>
+<body>
+
+<p>replace() sustituye el primer argumento de un valor por el segundo argumento</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="mostrarFuncion()">Ver función</button>
+<p id="demo2"></p>
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Microsoft","W3Schools");
+    document.getElementById("demo").innerHTML = txt;
+}
+function mostrarFuncion() {
+	document.getElementById('demo2').innerHTML = myFunction;
+}
+</script>
+
+</body>
+</html>
