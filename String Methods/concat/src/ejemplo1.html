@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Concat</title>
+</head>
+<body>
+	<p>El método concat() sirve para concatenar 2 o mas String</p>
+	<p id="demo"></p>
+	<button onclick="concatenar()">Concatenar</button>
+	<button onclick="ensenarFuncion()">Enseña función</button>
+
+	<script type="text/javascript">
+		var text1 = "Kaixo";
+		var text2 = "Mundua";
+		function concatenar() {
+			document.getElementById('demo').innerHTML = text1.concat(" ",text2);
+		}
+		function ensenarFuncion() {
+			document.getElementById('demo').innerHTML = concatenar;
+		}
+	</script>
+</body>
