@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+
+<p>El método charAt() nos devuelve el caracter de la posición pasada en el argumento</p>
+<p>El método charCodeAt() nos devuelve el código unicode del caracter de la posición pasada como argumento</p>
+<br><br>
+<h1>charAt()</h1>
+<p id="demo"></p>
+<button onclick="verPosicion()">ver función</button>
+<br>
+<br>
+<h1>charCodeAt()</h1>
+<p id="demo2"></p>
+<button onclick="verFuncionCodigo()">ver función</button>
+
+<script>
+function posicion() {
+	var str = "HELLO WORLD";
+	document.getElementById("demo").innerHTML = str.charAt(0);
+}
+function verPosicion() {
+	document.getElementById('demo').innerHTML = posicion;
+}
+
+function codigo() {
+	var str2 = "HELLO WORLD";
+	document.getElementById('demo2').innerHTML = str2.charCodeAt(0);
+}
+function verFuncionCodigo () {
+	document.getElementById('demo2').innerHTML = codigo;
+}
+posicion();
+codigo();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+
+<h3>Con el método split() podemos hacer un Array de cualquier String</h3>
+<br>
+<h4>Método split() String separado por , </h4>
+<button onclick="myFunction()">Try it</button>
+<button onclick="document.getElementById('demo2').innerHTML = myFunction;">ver función</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<br><br><br>
+<h4>Método split() String sin separación alguna</h4>
+<button onclick="separarString()">Pruébalo</button>
+<button onclick="document.getElementById('fun').innerHTML = separarString;">ver función</button>
+<p id="resu"></p>
+<p id="fun"></p>
+
+<script>
+function myFunction() {
+    var str = "a,b,c,d,e,f";
+    var arr = str.split(",");
+    document.getElementById("demo").innerHTML = arr[0];
+}
+
+function separarString() {
+	var str2 = "Hola Caracola";
+	var arr2 = str2.split("");
+	var texto = "";
+	for (var i = 0; i < arr2.length; i++) {
+		texto += arr2[i] + "<br>";
+	}
+	document.getElementById('resu').innerHTML = texto;
+}
+
+</script>
+
+</body>
+</html>
