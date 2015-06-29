@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear tabla</title>
+        <meta charset="utf-8"/>
+        <style>
+            body{
+             text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            function crear22(){
+                document.write("<h1>Tabla de 2 filas por 2 columnas</h1>");
+                document.write("<table border='1'>");
+                document.write("<tr>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("</tr>");
+                document.write("</table>");
+            }
+            function crear33(){
+                document.write("<h1>Tabla de 3 filas por 3 columnas</h1>");
+                document.write("<table border='1'>");
+                document.write("<tr>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("<td>A</td>");
+                document.write("</tr>");
+                document.write("</table>");
+            }
+            function saludo(){
+                document.write("<h1>Página de saludo</h1>");
+                document.write("¡Hola Mundo!");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>¿Qué quieres que muestre la página?</h1>
+
+        <input type="button" value="Una tabla de 2 filas * 2 columnas" onclick="crear22()"/>
+        <br/>
+        <br/>
+        <input type="button" value="Un mensaje de saludo" onclick="saludo()"/>
+        <br/>
+        <br/>
+        <input type="button" value="Una tabla de 3 filas * 3 columnas" onclick="crear33()"/>
+        
+    </body>
+</html>

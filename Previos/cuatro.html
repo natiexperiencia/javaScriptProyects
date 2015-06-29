@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<head>
+	<meta charset="UTF-8">
+	<title>Dos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nombre, nota, notaEntera;
+
+		nombre = prompt("Introduce el nombre del alumno: ", "");
+		nota = prompt("Introduce la nota del alumno: ", "");
+		
+		if(isNaN(nota)){
+			alert("Eso no es un número....");
+		}else{
+			notaEntera = parseInt(nota);
+
+			if(nota > 10){
+				alert("Eso no es una nota....");
+			}else{
+				if(nota >= 5){
+					document.write("El alumno "+nombre+" tiene una nota de "+nota+" con lo que ha aprobado"+"<br>Felicidades!!!!");
+				}else{
+					document.write("El alumno "+nombre+" tiene una nota de "+nota+" con lo que ha suspendido"+"<br>Mas suerte la próxima vez");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Veintitres</title>
+	<script type="text/javascript">
+
+		var dia,meses,mes,ano;
+
+		function data(d,m,a) {
+			document.write("La fecha introducida es: ");
+			document.write(d + " de " + meses[m-1] + " de " + a);
+		}
+
+		meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+		dia = prompt('Introduce el número del día: ', '1-31');
+		dia = parseInt(dia);
+		mes = prompt('Introduce el número del mes: ', '1-12');
+		mes = parseInt(mes);
+		ano = prompt('Introduce el año: ', '');
+		ano = parseInt(ano);
+
+		data(dia,mes,ano);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

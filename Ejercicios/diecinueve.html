@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<head>
+	<mate charset="UTF-8" />
+	<title>Diecinueve</title>
+	<script type="text/javascript">
+		var nombre, apellido, nombreCompleto, nombreApellido;
+		
+		nombre = prompt("Introduce el nombre: ");
+		nombre = nombre.concat(" ");
+		apellido = prompt("Introduce el apellido: ");
+
+		function nombreApellido (nombre, apellido) {
+			nombreApellido = nombre.concat(apellido);
+			return nombreApellido;
+		}
+		nombreCompleto = nombreApellido(nombre,apellido);
+		alert(nombreCompleto);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

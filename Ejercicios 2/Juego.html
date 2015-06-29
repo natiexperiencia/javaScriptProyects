@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Juego</title>
+
+	<script type="text/javascript">
+		var numeroSecreto, numero,contador;
+
+		function verifica() {
+			numero = document.getElementById('numero').value;
+			contador++;
+			document.getElementById('contador').innerHTML = contador;
+
+			if (numeroSecreto == numero) {
+				alert("Has acertado!!!!");
+				alert("Felicidades!!!!!!!!!!!!");
+			}else{
+				if (numeroSecreto > numero) {
+					alert("El número introducido muy PEQUEÑO");
+					alert("Inténtalo otra vez....");
+				}else{
+					if (numeroSecreto < numero) {
+						alert("El número introducido es muy GRANDE");
+						alert("Inténtalo otra vez");
+					}
+				}
+			}
+
+		}
+
+		function reiniciar() {
+			numeroSecreto = Math.floor(Math.random()*100);
+			document.getElementById('contador').innerHTML = 0;
+			document.getElementById('numero').value = "";
+		}
+
+		numeroSecreto = Math.floor(Math.random()*100);
+		contador = 0;
+	</script>
+</head>	
+<body align="center" style="background-color:lightgrey;">
+	<h1>Juego</h1>
+	<h1>Adivina el número</h1>
+	<br/>
+	<h3>Introduce un número del 0 al 100</h3>
+	<input type="number" id="numero" />
+	<br/>
+	<button id="boton" onclick="verifica()">Verifica</button>
+	<h5>Nº de intentos:</h5>
+	<p id="contador">0</p>
+	<br/>
+	<br/>
+	<button id="reinicio" onclick="reiniciar()">Reiniciar</button>
+
+</body>
+</html>

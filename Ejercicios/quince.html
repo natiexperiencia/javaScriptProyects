@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>	
+	<meta charset="UTF-8" />
+	<title>Doce</title>
+	<script type="text/javascript">
+		var opcion,dias;
+		
+		function diaSemana(ds,op) {
+			for(var e = 0; e < ds.length; e++) {
+				if (ds[e].toUpperCase() == op.toUpperCase()) {
+					document.write("El número de día de la semana seleccionado es: " + (e+1));
+				}
+			}
+		}
+		opcion = prompt('Introduce el día de la semana: ', 'lunes,martes,...');
+		dias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
+
+		diaSemana(dias,opcion);
+		
+
+	</script>
+</head>
+<body>
+</body>
+</html>

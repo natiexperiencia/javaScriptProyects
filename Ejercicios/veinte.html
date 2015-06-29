@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Veinte</title>
+	<script type="text/javascript">
+		var numero;
+		
+
+		function funcion(numeroEntero){
+			var i = 0;
+			while(i <= (numeroEntero*10)){
+				i = i+numeroEntero;
+				if (i <= (numeroEntero*10)) {
+					document.write("\n" + i);
+				}
+			}
+		}
+		numero = prompt('Introduce un número', '');
+		if(isNaN(numero)){
+			alert("Eso no es un número....")
+		}
+		numero = parseInt(numero);
+		funcion(numero);
+	</script>
+</head>
+<body>
+</body>
+</html>

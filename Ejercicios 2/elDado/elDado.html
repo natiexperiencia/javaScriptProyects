@@ -1,0 +1,111 @@
+<!DOCTYPE>
+<htmL>
+	<head>
+		<meta charset="UTF-8" />
+		<title>El dado</title>
+		<style type="text/css">
+			body{
+				color:white;
+				background-image:url('images/back.jpg');
+				text-align:center;
+			}
+			#mesa{
+				height:250px;
+				width:450px;
+				background-image: url("images/dado.jpg");
+				margin:auto;
+			}
+			#boton{
+				margin-top:200px;
+			}
+		</style>
+		<script type="text/javascript">
+			var contador = 0;
+			var con1,con2,con3,con4,con5,con6;
+			con1 = 0;
+			con2 = 0;
+			con3 = 0;
+			con4 = 0;
+			con5 = 0;
+			con6 = 0;
+
+			function sumTotal(numero) {
+				if (numero == 1) {
+					con1++;
+				}else if(numero == 2){
+					con2++;
+				}else if(numero == 3){
+					con3++;
+				}else if(numero == 4){
+					con4++;
+				}else if(numero == 5){
+					con5++;
+				}else if(numero == 6){
+					con6++;	
+				}
+			}
+
+			function tirarDado() {
+
+				var numero=Math.ceil(Math.random()*6);
+				sumTotal(numero);
+				if (contador == 4) {
+					alert("No hay mas espacios");
+					reset();
+				}else{
+
+				if (contador == 0) {
+					document.getElementById('mesa').style.backgroundImage = "url()";
+					document.getElementById('mesa').innerHTML = "<table border='1' width='450px' height='450px'><tr><td id='00'></td><td id='01'></td></tr><tr><td id='10'></td><td id='11'></tr></table>"
+				}
+
+				if (contador == 0) {
+					document.getElementById('00').style.backgroundImage = "url(images/"+numero+".PNG)"
+					document.getElementById('00').style.backgroundSize = "220px 220px";
+				}else if(contador == 1){
+					document.getElementById('01').style.backgroundImage = "url(images/"+numero+".PNG)"
+					document.getElementById('01').style.backgroundSize = "220px 220px";					
+				}else if(contador == 2){
+					document.getElementById('10').style.backgroundImage = "url(images/"+numero+".PNG)"
+					document.getElementById('10').style.backgroundSize = "220px 220px";
+				}else if(contador == 3){
+					document.getElementById('11').style.backgroundImage = "url(images/"+numero+".PNG)"
+					document.getElementById('11').style.backgroundSize = "220px 220px";
+					pintarTotal();
+				}
+
+				contador++;
+				}
+			}
+
+			function reset() {
+				contador = 0;
+				con1 = 0;
+				con2 = 0;
+				con3 = 0;
+				con4 = 0;
+				con5 = 0;
+				con6 = 0;
+				document.getElementById('mesa').style.backgroundImage = "url(images/dado.jpg)";
+				document.getElementById('mesa').innerHTML = "";
+				document.getElementById('resultado').innerHTML = "";
+			}
+
+			
+
+			function pintarTotal(){
+				document.getElementById("resultado").innerHTML = "<br/><br/>Totales:<br/>1: " + con1 + "<br/>2: " + con2 + "<br/>3: " + con3 + "<br/>4: " + con4 + "<br/>5: " + con5 + "<br/>6: " + con6;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>El juego del dado</h1>
+		<div id="mesa"></div>
+		<br/>
+		<button id ="boton" onclick="tirarDado()">Tirar dado</button>
+		<br/>
+		<button onclick="reset()">Reset</button>
+		<di id="resultado"></div>
+
+	</body>
+	</html>

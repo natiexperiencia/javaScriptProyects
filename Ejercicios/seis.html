@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Seis</title>
+	<script type="text/javascript">
+		var numeroDigitos;
+		var numero = prompt('Introduce un número: ', '0 - 9999');
+
+		if (isNaN(numero)) {
+			alert("Eso no es un número....");
+		}
+
+		if (numero < 0 || numero > 9999) {
+			alert("Te has salido del rango de números...");
+		}
+
+		numeroDigitos = numero.length;
+
+		document.write("El número " + numero + " tiene " + numeroDigitos + " dígitos");
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Diecisiete</title>
+	<script type="text/javascript">
+
+		var opcion = prompt("Introduce un número: ");
+		function impares(opcion){
+			document.write("Los primeros " + opcion + " números impares són: " + "<br>");
+			var numero = 1;
+			for (var i = 0; i < opcion; i++) {
+				document.write(numero + "\t");
+				numero = numero + 2;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="impares(opcion)">Resultado</button>
+</body>
+</html>

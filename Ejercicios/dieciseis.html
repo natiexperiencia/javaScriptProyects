@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Array</title>
+	<script type="text/javascript">
+
+		
+		var opcion = prompt('Introduce el mes: ', 'enero,febrero,...');
+		var meses = ["enero","febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+		while (opcion.toUpperCase() !== meses[0].toUpperCase() && opcion.toUpperCase() !== meses[1].toUpperCase() && opcion.toUpperCase() !== meses[2].toUpperCase() && opcion.toUpperCase() !== meses[3].toUpperCase() && opcion.toUpperCase() !== meses[4].toUpperCase() && opcion.toUpperCase() !== meses[5].toUpperCase() && opcion.toUpperCase() !== meses[6].toUpperCase() && opcion.toUpperCase() !== meses[7].toUpperCase() && opcion.toUpperCase() !== meses[8].toUpperCase() && opcion.toUpperCase() !== meses[9].toUpperCase() && opcion.toUpperCase() !== meses[10].toUpperCase() && opcion.toUpperCase() !== meses[11].toUpperCase()) {
+			alert("Eso no es un mes válido...");
+			var opcion = prompt('Introduce el mes: ', 'enero,febrero,...');
+		}
+
+		for(var e = 0; e < meses.length; e++) {
+			if (meses[e].toUpperCase() == opcion.toUpperCase()) {
+				document.write("El número de mes seleccionado es: " + (e+1));
+			}
+		}
+		
+
+	</script>
+</head>
+<body>
+</body>
+</html>

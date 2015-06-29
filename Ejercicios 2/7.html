@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Adivino</title>
+
+	<script type="text/javascript">
+		var min,max,numero,intentos;
+		min=0;
+		max=100;
+		numero=50;
+		intentos=0;
+
+		function acierto() {
+			alert("He acertado!!!" + "\n" + "Tu número es: " + numero);
+		}
+		function menor() {
+			intentos++;
+			max=numero;
+			numero = Math.floor((max+min)/2);
+			document.getElementById('numero').innerHTML = numero;
+			document.getElementById('intentos').innerHTML = "Intentos: " + intentos;
+		}
+		function mayor() {
+			intentos++;
+			min=numero;
+			numero= Math.floor((max+min)/2);
+			document.getElementById('numero').innerHTML = numero;
+			document.getElementById('intentos').innerHTML = "Intentos: " + intentos;
+		}
+		function reiniciar() {
+			intentos=0;
+			min=0;
+			max=100;
+			numero=50;
+			document.getElementById('numero').innerHTML = numero;
+			document.getElementById('intentos').innerHTML = "Intentos: " + intentos;
+		}
+
+
+	</script>
+</head>
+<body align="center">
+	<h1>El Adivino de Números</h1>
+	<h3>Piensa en un número que esté entre 0 y 100</h3>
+	<h3>¿Es el número?:</h3> 
+	<h3 id="numero">50</h3>
+	<button onclick="menor()">Es menor!!!</button>
+	<button onclick="acierto()">¡Has acertado!</button>
+	<button onclick="mayor()">Es mayor!!!</button>
+	<br/>
+	<button onclick="reiniciar()">Reiniciar</button>
+	<h3 id="intentos">Intentos: 0</h3>
+
+</body>
+	</html>

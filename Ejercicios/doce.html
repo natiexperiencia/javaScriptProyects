@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Array</title>
+	<script type="text/javascript">
+
+		
+		var opcion = prompt('Introduce el número del día de la semana: ', '1-7');
+		var dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+
+		while (isNaN(opcion) || opcion == "") {
+			alert("Eso no es un número del 1 al 7");
+			var opcion = prompt('Introduce el número del día de la semana: ', '1-7');
+		}
+		opcion = parseInt(opcion);
+		opcion = opcion - 1;
+		document.write("El número del día de la semana " + (opcion +1 ) + " es el: " + dias[opcion]);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

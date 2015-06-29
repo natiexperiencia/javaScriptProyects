@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Veintidos</title>
+	<script type="text/javascript">
+
+		var opcion,dias,dia;
+
+		function dia(op) {
+			op = op - 1;
+			dia = dias[op];
+			return dia;
+		}
+
+		opcion = prompt('Introduce el número del día de la semana: ', '1-7');
+		dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+		opcion = parseInt(opcion);
+
+		document.write("El número del día de la semana " + opcion  + " es el: " + dia(opcion));
+	</script>
+</head>
+</body>
+</html>

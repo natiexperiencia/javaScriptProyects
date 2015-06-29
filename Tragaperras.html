@@ -1,0 +1,147 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Tragaperras Definitivo</title>
+	
+	<style type="text/css">
+		body{
+			background-image:url("RECURSOS/images/fondo.jpg");
+		}
+		header{
+			margin-top:-8px;
+			margin-left:-8px;
+			margin-right:-8px; 
+			height:120px;
+			background-color:#ff9922;
+		}
+		#logo{
+			margin-top:10px;
+			margin-left:10px;
+			width:100px;
+			height:100px;
+			float:left;
+		}
+		#titulo{
+			font-family:'Comic Sans MS';
+			font-size:35pt;
+			margin-left:450px;
+			float:left;
+			color:white;
+			margin-bottom:100px;
+			margin-top:15px;
+		}
+		table{
+			clear:left;
+			margin-bottom:10px;
+		}
+		.posicion{
+			width:200px;
+			height:250px;
+			background-size:200px 250px;
+		}
+		#botones{
+			text-align:center;
+			padding:10px;
+		}
+
+		footer{
+			height:50px;
+			background-color:#ff9922;
+			margin-right:-8px;
+			margin-left:-8px;
+		}
+		#autor{
+			margin-left:50px;
+		}
+		#marcador{
+			margin-left:450px;
+			font-size:20pt;
+			font-weight:bold;
+			font-family:'Comic Sans MS';
+			margin-bottom:20px;
+		}
+		#cantPartidas{
+			color:white;
+		}
+		#cantGanadas{
+			color:white;
+		}
+	</style>
+
+	<script type="text/javascript">
+		//Variables globales
+		var ganadas = 0;
+		var jugadas = 0;
+		var turno = 1;
+		var numeros = new Array();
+
+		//Función para jugar
+		function jugar() {
+			var numero=Math.floor(Math.random()*3);
+			numeros.push(numero);
+			if (turno == 1) {
+				document.getElementById('1').style.backgroundImage = "url('RECURSOS/images/"+numero+".jpg')";
+			}else if(turno == 2){
+				document.getElementById('2').style.backgroundImage = "url('RECURSOS/images/"+numero+".jpg')";
+			}else if(turno == 3){
+				document.getElementById('3').style.backgroundImage = "url('RECURSOS/images/"+numero+".jpg')";
+				comprobar();
+			};
+			turno++;
+		}
+
+		//Función para resetear
+		function reset() {
+			document.getElementById('1').style.backgroundImage = "url('')";
+			document.getElementById('2').style.backgroundImage = "url('')";
+			document.getElementById('3').style.backgroundImage = "url('')";
+			turno = 1;
+			numeros.length=0;
+		}
+
+		//Función que comprueba si has ganado
+		function comprobar(){
+			if (numeros[0] == 1 && numeros[1] == 1 && numeros[2] == 1) {
+				alert("Has ganado!!! Con cerezas");
+				alert("Premio 100€");
+				ganadas++;
+			}else if(numeros[0] == 0 && numeros[1] == 0 && numeros[2] == 0){
+				alert("Has ganado!!! Con sietes");
+				alert("Premio 200€");
+				ganadas++;
+			}else if(numeros[0] == 2 && numeros[1] == 2 && numeros[2] == 2){
+				alert("Has ganado!!! Con estrellas");
+				alert("Premio 300€");
+				ganadas++;
+			};
+			jugadas++;
+			document.getElementById('cantPartidas').innerHTML = jugadas;
+			document.getElementById('cantGanadas').innerHTML = ganadas;
+		}
+	</script>
+</head>
+<body>
+	<header><img id="logo" src="RECURSOS/images/logo.png" /><h1 id="titulo">Tragaperras</h1></header>
+	<div id="cuerpo">
+		<table border="1" align="center">
+			<tr>
+				<td id="1" class="posicion"></td><td id="2" class="posicion"></td><td id="3" class="posicion"></td>
+			</tr>
+			<tr>
+				<td id="botones" colspan="3"><button onclick="jugar()">¡A jugar!</button><button onclick="reset()">Reset</button></td>
+			</tr>
+		</table>
+		<table id="marcador">
+			<tr>
+				<td>Cantidad de partidas: </td><td id="cantPartidas">0</td>
+			</tr>
+			<tr>
+				<td>Cantidad partidas ganadas: </td><td id="cantGanadas">0</td>
+			</tr>
+		</table>
+		</table>
+		<br/>
+		<footer><p id="autor">&copy;Iker Oñatibia - 2015</p></footer>
+</body>	
+</html>

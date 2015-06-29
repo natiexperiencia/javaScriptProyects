@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 1</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            function sum(){
+                var a=parseInt(document.getElementById("num1").value);
+                 var b=parseInt(document.getElementById("num2").value);
+                 document.getElementById("result").value=a+b;
+            }
+            
+            function rest(){
+                var a=parseInt(document.getElementById("num1").value);
+                 var b=parseInt(document.getElementById("num2").value);
+                 document.getElementById("result").value=a-b;
+            }
+            
+            function multi(){
+                var a=parseInt(document.getElementById("num1").value);
+                 var b=parseInt(document.getElementById("num2").value);
+                 document.getElementById("result").value=a*b;
+            }
+            
+            function divi(){
+                var a=parseInt(document.getElementById("num1").value);
+                 var b=parseInt(document.getElementById("num2").value);
+                 document.getElementById("result").value=a/b;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <table border=1>
+            <tr>
+                <td>numero 1</td>
+                <td>numero 2</td>
+                <td>resultado</td>
+            </tr>
+            <tr>
+                <td> <input type="text" id="num1"/></td>
+                <td><input type="text" id="num2"/></td>
+                <td><input type="text" id="result"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="suma" value="+" onclick="sum()"/>
+                    <input type="button" id="resta" value="-" onclick="rest()"/>
+                    <input type="button" id="multiplicacion" value="*" onclick="multi()"/>
+                    <input type="button" id="division" value="/" onclick="divi()"/>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

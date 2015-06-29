@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Calculadora</title>
+	<link rel="StyleSheet" href="estilos.css" type="text/css">
+	<script type="text/javascript">
+		var formula, resultado;
+
+		function calcular() {
+			formula = document.getElementById('pantalla').value;
+			if (formula == "") {
+				document.getElementById('pantalla').value = 0;
+			}else{
+				resultado = eval(formula);
+				document.getElementById('pantalla').value = resultado;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form id="calculadora">
+		<table align="center">
+			<tbody>
+				<tr>
+					<td colspan="4"> <input type="text" id="pantalla" size="16" />
+					</td>
+				</tr>
+				<tr align="center">
+					<td><input type="button" id="plus" value="+" onclick="document.getElementById('pantalla').value += ' + '"></td>
+					<td><input type="button" id="uno" value=" 1 " onclick="document.getElementById('pantalla').value += '1' "></td>
+					<td><input type="button" id="dos" value=" 2 " onclick="document.getElementById('pantalla').value += '2'"></td>
+					<td><input type="button" id="tres" value=" 3 " onclick="document.getElementById('pantalla').value += '3'"></td>
+				</tr>
+				<tr align="center">
+					<td><input type="button" id="minus" value="-" onclick="document.getElementById('pantalla').value += ' - '"></td>
+					<td><input type="button" id="cuatro" value=" 4 " onclick="document.getElementById('pantalla').value += '4'"></td>
+					<td><input type="button" id="cinco" value=" 5 " onclick="document.getElementById('pantalla').value += '5'"></td>
+					<td><input type="button" id="seis" value=" 6 " onclick="document.getElementById('pantalla').value += '6'"></td>
+				</tr>
+				<tr align="center">
+					<td><input type="button" id="por" value="*" onclick="document.getElementById('pantalla').value += ' * '"></td>
+					<td><input type="button" id="siete" value=" 7 " onclick="document.getElementById('pantalla').value += '7'"></td>
+					<td><input type="button" id="ocho" value=" 8 " onclick="document.getElementById('pantalla').value += '8'"></td>
+					<td><input type="button" id="nueve" value=" 9 " onclick="document.getElementById('pantalla').value += '9'"></td>
+				</tr>
+				<tr align="center">
+					<td><input type="button" id="dividir" value="/" onclick="document.getElementById('pantalla').value += ' / '"></td>
+					<td><input type="button" id="clear" value=" C " onclick="document.getElementById('pantalla').value = '' "></td>
+					<td><input type="button" id="cero" value=" 0 " onclick="document.getElementById('pantalla').value += '0'"></td>
+					<td><input type="button" id="igual" value=" = " onclick="calcular()"></td>
+				</tr>
+					
+					
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

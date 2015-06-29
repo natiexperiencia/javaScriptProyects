@@ -1,0 +1,21 @@
+
+table{
+	background-color:lightgrey;
+	width:400px;
+	height:500px;
+	border:5px solid blue;
+	border-radius:15px;
+}
+#pantalla{
+	width:100%;
+	font-size:40px;
+	color:white;
+	background-color:black;
+}
+input{
+	width:80px;
+	height:80px;
+	font-size:40px;
+	background-color:red;
+	border-radius:15px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<head>
+	<meta charset="UTF-8">
+	<title>Dos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var valor1, valor2, valor3;
+
+		valor1 = prompt("Introduce un número: ", "");
+		valor2 = prompt("Introduce un segundo número: ", "");
+		valor3 = prompt("Introduce un tercer número: ", "");
+
+		if(isNaN(valor1) || isNaN(valor2) || isNaN(valor3)){
+			alert("Eso no es un número");
+		}else{
+			valor1 = parseInt(valor1);
+			valor2 = parseInt(valor2);
+			valor3 = parseInt(valor3);
+
+			if(valor1 > valor2 && valor1 > valor3){
+				document.write("El número mayor es el primero: "+valor1);
+			}else if(valor2 > valor3){
+				document.write("El núemro mayor es el segundo: "+valor2);
+			}else{
+				document.write("El número mayor es tercero: "+valor3);
+			}
+		}
+	</script>
+</body>
+</html>

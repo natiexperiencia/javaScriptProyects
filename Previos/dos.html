@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<head>
+	<meta charset="UTF-8">
+	<title>Dos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nombre;
+		var edad;
+		var altura;
+		var casado;
+
+		nombre = prompt("Escribe tu nombre:", "");
+		edad = prompt("Escribe tu edad:", "");
+		altura = prompt("Escribe tu altura:", "");
+		casado = prompt("Estas casado?:", "true/false");
+
+		alert("Que pasa "+nombre);
+
+		document.write("Tu nombre es: "+nombre+"<br>");
+		document.write("Tu edad es: "+edad+"<br>");
+		document.write("Tu altura es: "+altura+"<br>");
+		if(casado == true){
+			casado = "casado";
+		}else{
+			casado = "no casado";
+		}
+		document.write("Tu estado civil es: "+casado);
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Veintiuno</title>
+	<script type="text/javascript">
+		var numero,resultado;
+
+		function factorial (num) {
+			for (var i = 1; i <= num; i++) {
+				resultado *= i;
+			}
+			return resultado;
+		}
+
+		numero = prompt("Introduce un número: ");
+		resultado = 1;
+		document.write(factorial(numero));
+	</script>
+</head>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Diez</title>
+	<script type="text/javascript">
+
+	
+
+		function generarTabla() {
+			var col, cel,imagen;
+			resultado ='<table border="1">';
+			col = parseInt(document.getElementById("columnas").value);
+			cel = parseInt(document.getElementById("celdas").value);
+			imagen = "";
+			
+			for (var i = 0; i < col; i++) {
+
+				resultado = resultado.concat('<tr>');
+
+				for (var e = 0; e < cel; e++) {
+					imagen = i.toString();
+					imagen = imagen.concat(e.toString(),'.jpg');
+					resultado = resultado.concat('<td><img height="200px" width="180px" src="Pruebas/images/'+imagen+'"/></td>');
+				}
+
+				resultado = resultado.concat('</tr>');
+			}
+			resultado = resultado.concat('</table>');
+			document.getElementById('parrafo').innerHTML = resultado;
+		}
+	</script>
+</head>
+<body align="center">
+	<h1>Tabla dinámica</h1>
+	<p>Ingresa el número de columnas</p>
+	<input type="number" id="columnas">
+	<p>Ingresa el número de celdas</p>
+	<input type="number" id="celdas">
+	<br/>
+	<button onclick="generarTabla()">Generar tabla</button>
+	<p align="center" id="parrafo"></p>
+</body>
+</html>

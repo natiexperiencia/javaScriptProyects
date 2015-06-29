@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Array</title>
+	<script type="text/javascript">
+
+		
+		var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+		
+		//Mes
+		var mes = prompt('Introduce el número del mes: ', '1-12');
+
+		while(isNaN(mes) || mes == "" || mes <= 0 || mes > 12){
+			alert("Eso no es un número del 1 al 12");
+			var mes = prompt('Introduce el número del mes: ', '1-12');
+		}
+		mes = parseInt(mes);
+		var mesArray = mes -1;
+
+		//Imprimir
+
+		document.write("El mes seleccionado es: <br>");
+		document.write(meses[mesArray] + " y tiene ");
+		if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+			document.write("31 días");
+		}else{
+			if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+				document.write("30 días");
+			}else{
+				document.write("28 o 29 días");
+			}
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

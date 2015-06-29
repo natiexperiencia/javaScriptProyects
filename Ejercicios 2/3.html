@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Tres</title>
+	<script type="text/javascript">
+		function sumar(num1, num2) {
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			document.getElementById('cel3').innerHTML = (num1+num2);
+		}
+		function restar(num1, num2) {
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			document.getElementById('cel3').innerHTML = (num1-num2);
+		}
+		function multiplicar(num1, num2) {
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			document.getElementById('cel3').innerHTML = (num1*num2);
+		}
+		function dividir(num1, num2) {
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			document.getElementById('cel3').innerHTML = (num1 / num2);
+		}
+	</script>
+</head>
+<body>
+	<table border="1" padding="5">
+		<tr>
+			<td>Numero 1</td>
+			<td>Numero 2</td>
+			<td>Resultado</td>
+		</tr>
+		<tr>
+			<td><input type="number" id="cel1"></td>
+			<td><input type="number" id="cel2"></td>
+			<td id="cel3"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<button onclick="sumar(document.getElementById('cel1').value, document.getElementById('cel2').value)">+</button>
+				<button onclick="restar(document.getElementById('cel1').value, document.getElementById('cel2').value)">-</button>
+				<button onclick="multiplicar(document.getElementById('cel1').value, document.getElementById('cel2').value)">*</button>
+				<button onclick="dividir(document.getElementById('cel1').value, document.getElementById('cel2').value)">/</button>
+			</td>
+		</tr>
+	</table>
+</body>

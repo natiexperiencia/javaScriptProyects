@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Diez</title>
+	<script type="text/javascript">
+		var numero = prompt('Introduce un número', '');
+
+		if(isNaN(numero)){
+			alert("Eso no es un número....")
+		}
+
+		var numeroEntero = parseInt(numero);
+
+		var i = 0;
+		while(i <= (numeroEntero*10)){
+			i = i+numeroEntero;
+			if (i <= (numeroEntero*10)) {
+				document.write("\n" + i);
+			}
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

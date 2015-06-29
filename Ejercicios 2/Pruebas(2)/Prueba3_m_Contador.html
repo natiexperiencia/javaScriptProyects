@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript contador</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            function repetir(){
+                var n=parseInt(document.getElementById("n1").value);
+              
+                for (i=0;i<=n;i++){
+                    document.write("Contador: "+i+"<br/>");   
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" id="n1"/>
+        <input type="button" value="¡Repetir!" onclick="repetir()"/>
+        <br/>
+    </body>
+</html>

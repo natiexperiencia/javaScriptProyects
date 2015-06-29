@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>La Primitiva</title>
+	<script type="text/javascript">
+		var apuestas = new Array();
+		var complementarioApuesta;
+		var sorteos = new Array();
+		var complementarioSorteo;
+		var contador = 0;
+		var contador2 = 0;
+		var aciertos = 0;
+
+		function apuesta() {
+			if (contador != 0) {
+				alert("No se pueden hacer mas apuestas....");
+			}else{
+				var numero;
+				for (var i = 0; i < 6; i++) {
+					 numero = Math.ceil(Math.random()*49);
+					 apuestas.push(numero);
+				}
+				contador++;
+				document.getElementById('apuesta').innerHTML = apuestas;
+				numero = Math.floor(Math.random()*9);
+				document.getElementById('complApuesta').innerHTML = numero;	
+			}
+		}
+
+		function sorteo() {
+			if (contador2 != 0) {
+				alert("No se pueden hacer mas sorteos....");
+			}else{
+				var numero;
+				for (var i = 0; i < 6; i++) {
+					 numero = Math.ceil(Math.random()*49);
+					 sorteos.push(numero);
+				}
+				contador2++;
+				document.getElementById('sorteo').innerHTML = sorteos;
+				numero = Math.floor(Math.random()*9);
+				document.getElementById('complSorteo').innerHTML = numero;
+				comprobar(sorteos, apuestas);
+			}
+		}
+
+		function comprobar(sorteos, apuestas) {
+			for(var i = 0; i<apuestas.length; i++){
+				for(var e = 0; e<sorteos.length; e++){
+					if(apuestas[i] == sorteos[e]){
+						aciertos++;
+					}
+				}
+			}
+			alert(aciertos);
+		}
+
+	</script>
+</head>
+<body>
+	<h1>La Primitiva</h1>
+	<button onclick="apuesta()">Apuesta automática</button>
+	<p id="apuesta">_ _ _ _ _ _&nbsp;&nbsp;&nbsp;_</p><p id="complApuesta"></p>
+	<button onclick="sorteo()">Sorteo</button>
+	<p id="sorteo">_ _ _ _ _ _&nbsp;&nbsp;&nbsp;_</p><p id="complSorteo"></p>
+</body>
+</html>

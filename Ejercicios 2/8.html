@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Ocho</title>
+
+	<script type="text/javascript">
+	
+		function tabla2() {
+			var resultado;
+			resultado ='<table border="1">';
+			
+			for (var i = 1; i <= 2; i++) {
+
+				resultado = resultado.concat('<tr>');
+
+				for (var e = 1; e <= 2; e++) {
+
+					resultado = resultado.concat('<td>A</td>');
+				}
+
+				resultado = resultado.concat('</tr>');
+			}
+			resultado = resultado.concat('</table>');
+			document.getElementById('parrafo').innerHTML = resultado;
+		}
+
+		function saludo() {
+			document.getElementById('parrafo').innerHTML = "Hola usuario";
+		}
+
+		function tabla3() {
+			var resultado;
+			resultado ='<table border="1">';
+			
+			for (var i = 1; i <= 3; i++) {
+
+				resultado = resultado.concat('<tr>');
+
+				for (var e = 1; e <= 3; e++) {
+
+					resultado = resultado.concat('<td>A</td>');
+				}
+
+				resultado = resultado.concat('</tr>');
+			}
+			resultado = resultado.concat('</table>');
+			document.getElementById('parrafo').innerHTML = resultado;
+		}
+	</script>
+</head>
+
+<body align="center">
+	<h1>¿Que quieres que muestre la página?</h1>
+	<button onclick="tabla2()">Una tabla de 2 filas * 2 columnas</button>
+	<br/><br/>
+	<button onclick="saludo()">Un mensaje de saludo</button>
+	<br/>
+	<br/>
+	<button onclick="tabla3()">Una tabla de 3 filas * 3 columnas</button>
+	<br/>
+	<br/>
+	<p align="center" id="parrafo"></p>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE>
+<head>
+	<title>Tres en raya</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	body{
+		background-image: url("Pruebas/images/back.jpg");
+	}
+		table{
+			float:left;
+			width:600px;
+			height:600px;
+			text-align:center;
+		}
+		td{
+			padding:0px;
+			background-size:190px 190px;
+		}
+		h1{
+			text-align:center;
+			margin-bottom:2px;
+		}
+		#fondoPequeno{
+			height:200px;
+			width:200px;
+		}
+		#muestrax{
+			background-size:190px 190px;
+			background-image:url("Pruebas/images/X.jpg");
+			float:left;
+			height:190px;
+			width:190px;
+			margin:100px;
+		}
+		a{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+		}
+	</style>
+
+	<script type="text/javascript">
+	var contadorTurno = 1;
+	var contador = 1;
+
+		function ponerFoto (a,b) {
+			if(contador > 9){
+				alert("No hay mas espacios")
+			}else{
+				a = parseInt(a);
+				b = parseInt(b);
+				var celda = a+""+b;
+				if(document.getElementById(celda).style.backgroundImage != ""){
+					alert("Ahi no");
+					contadorTurno++
+				}else{
+					if(contadorTurno%2 != 0){
+						document.getElementById(celda).style.backgroundImage = "url(Pruebas/images/O.jpg)";
+					}else{
+						document.getElementById(celda).style.backgroundImage = "url(Pruebas/images/X.jpg)";
+					}
+				}
+			comprobar();
+			contadorTurno++;
+			contador++
+			}	
+		}
+
+		
+		
+		function comprobar() {
+			var o = document.getElementById("muestrao").style.backgroundImage;
+			var x = document.getElementById("muestrax").style.backgroundImage;
+			//Comprobar O
+			//Horizontal
+			if (document.getElementById('00').style.background == o && document.getElementById('01').style.backgroundImage == o && document.getElementById('02').style.backgroundImage == o) {
+				alert("Ha ganado O");
+			}else if(document.getElementById('10').style.background == o && document.getElementById('11').style.backgroundImage == o && document.getElementById('12').style.backgroundImage == o){
+				alert("Ha ganado O");
+			}else if(document.getElementById('20').style.background == o && document.getElementById('21').style.backgroundImage == o && document.getElementById('22').style.backgroundImage == o){
+				alert("Ha ganado O");
+			//Vertical
+			}else if(document.getElementById('00').style.background == o && document.getElementById('10').style.backgroundImage == o && document.getElementById('20').style.backgroundImage == o){
+				alert("Ha ganado O");
+			}else if(document.getElementById('01').style.background == o && document.getElementById('11').style.backgroundImage == o && document.getElementById('21').style.backgroundImage == o){
+				alert("Ha ganado O");
+			}else if(document.getElementById('02').style.background == o && document.getElementById('12').style.backgroundImage == o && document.getElementById('22').style.backgroundImage == o){
+				alert("Ha ganado O");
+				//Diagonales
+			}else if(document.getElementById('00').style.background == o && document.getElementById('11').style.backgroundImage == o && document.getElementById('22').style.backgroundImage == o){
+				alert("Ha ganado O");
+			}else if(document.getElementById('20').style.background == o && document.getElementById('11').style.backgroundImage == o && document.getElementById('02').style.backgroundImage == o){
+				alert("Ha ganado O");
+			};
+
+			//Comprobar X
+			//Horizontal
+			if (document.getElementById('00').style.background == x && document.getElementById('01').style.backgroundImage == x && document.getElementById('02').style.backgroundImage == x) {
+				alert("Ha ganado X");
+			}else if(document.getElementById('10').style.background == x && document.getElementById('11').style.backgroundImage == x && document.getElementById('12').style.backgroundImage == x){
+				alert("Ha ganado X");
+			}else if(document.getElementById('20').style.background == x && document.getElementById('21').style.backgroundImage == x && document.getElementById('22').style.backgroundImage == x){
+				alert("Ha ganado X");
+			//Vertical
+			}else if(document.getElementById('00').style.background == x && document.getElementById('10').style.backgroundImage == x && document.getElementById('20').style.backgroundImage == x){
+				alert("Ha ganado X");
+			}else if(document.getElementById('01').style.background == x && document.getElementById('11').style.backgroundImage == x && document.getElementById('21').style.backgroundImage == x){
+				alert("Ha ganado X");
+			}else if(document.getElementById('02').style.background == x && document.getElementById('12').style.backgroundImage == x && document.getElementById('22').style.backgroundImage == x){
+				alert("Ha ganado X");
+				//Diagonales
+			}else if(document.getElementById('00').style.background == x && document.getElementById('11').style.backgroundImage == x && document.getElementById('22').style.backgroundImage == x){
+				alert("Ha ganado X");
+			}else if(document.getElementById('20').style.background == x && document.getElementById('11').style.backgroundImage == x && document.getElementById('02').style.backgroundImage == x){
+				alert("Ha ganado X");
+			};
+			
+
+		}
+
+	</script>
+
+</head>
+<body>
+	<h1>Tres en raya</h1>
+			<div id="muestrao" style="background-size:190px 190px;
+			background-image:url('Pruebas/images/O.jpg');float:left;
+			height:190px;width:190px;"></div>
+	<table border="1" align="center">
+		<tr>
+			<td id="00" onclick="ponerFoto(0,0)"></td>
+			<td id="01" onclick="ponerFoto(0,1)"></td>
+			<td id="02" onclick="ponerFoto(0,2)"></td>
+		</tr>
+		<tr>
+			<td id="10" onclick="ponerFoto(1,0)"></td>
+			<td id="11" onclick="ponerFoto(1,1)"></td>
+			<td id="12" onclick="ponerFoto(1,2)"></td>
+		</tr>
+		<tr>
+			<td id="20" onclick="ponerFoto(2,0)"></td>
+			<td id="21" onclick="ponerFoto(2,1)"></td>
+			<td id="22" onclick="ponerFoto(2,2)"></td>
+		</tr>
+	</table>
+	<div id="muestrax" style ="background-size:190px 190px;
+	background-image:url('Pruebas/images/X.jpg');float:left;
+	height:190px;width:190px;margin:100px;"></div>
+</body>
+</html>

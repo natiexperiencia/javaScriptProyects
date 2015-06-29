@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Cinco . uno</title>
+	<script type="text/javascript">
+		var numero, resultado;
+
+		function cuenta() {
+			resultado = "";
+			numero = document.getElementById('cuadro').value;
+
+			for (var i = 0; i <= numero; i++) {
+				resultado = resultado.concat("Contador: ",i,"<br/>");
+			}
+			document.getElementById('contador').innerHTML = resultado;
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="number" id="cuadro" />
+	<button id="boton" onclick="cuenta(numero)">Repetir</button>
+	<p id="contador">Contador: 0</p>
+</body>
+</html>

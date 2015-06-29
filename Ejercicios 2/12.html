@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Catálogo</title>
+	<link rel="stylesheet" type="text/css" href="galeria.css" />
+	<script type="text/javascript">
+
+		var ruta;
+		ruta = "";
+
+		function cambiarFoto(foto) {
+			document.getElementById('foto').src = ruta+foto;
+		}
+
+		function mostrarCatalogo() {
+
+            var producto = document.getElementById("entradaproducto").value;
+            switch (producto) {
+
+                case 'ordenador':
+                	ruta = "Pruebas/images0/";
+                    break;
+                case 'tablet':
+                    ruta = "Pruebas/images2/";
+                    break;
+                case 'videojuego':
+                    ruta = "Pruebas/images3/";
+                    break;
+            }
+            document.getElementById('contenido').innerHTML = "<table border='1' align='center'><tr><td id='fotoCentral' colspan='4'><img id='foto' src='"+ruta+"00.jpg'></td></tr><tr><td><img id='mini' src='"+ruta+"00.jpg' onclick='cambiarFoto(\"00.jpg\")' /></td><td><img id='mini' src='"+ruta+"01.jpg' onclick='cambiarFoto(\"01.jpg\")' /></td><td><img id='mini' src='"+ruta+"02.jpg' onclick='cambiarFoto(\"02.jpg\")' /></td><td><img id='mini' src='"+ruta+"03.jpg' onclick='cambiarFoto(\"03.jpg\")' /></td></tr><tr><td><img id='mini' src='"+ruta+"10.jpg' onmouseover='cambiarFoto(\"10.jpg\")' /></td><td><img id='mini' src='"+ruta+"11.jpg' onmouseover='cambiarFoto(\"11.jpg\")' /></td><td><img id='mini' src='"+ruta+"12.jpg' onmouseover='cambiarFoto(\"12.jpg\")' /></td><td><img id='mini' src='"+ruta+"13.jpg' onmouseover='cambiarFoto(\"13.jpg\")' /></td></tr></table>";
+        }
+	</script>
+</head>
+<body align="center">
+	<h1>Catálogo</h1>
+	<br>
+	<input id="entradaproducto" list="listaproducto" placeholder="Selecciona un producto" oninput="mostrarCatalogo()" />
+	<datalist id="listaproducto">
+        <option value="ordenador" />
+        <option value="tablet" />
+        <option value="videojuego" />
+    </datalist>
+
+    <p id="contenido"></p>
+</body>
+</html>

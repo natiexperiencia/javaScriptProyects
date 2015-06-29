@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Veiticinco</title>
+	<script type="text/javascript">
+		var peso,altura;
+
+		function sobrepeso(pe,al) {
+			icm =  pe / (al*al);
+			if (icm < 18) {
+				document.write("ICM = " + icm + "<br>" + "Peso bajo");
+			}else if(icm <= 24.9){
+				document.write("ICM = " + icm + "<br>" + "Normal");
+			}else if(icm <= 26.9){
+				document.write("ICM = " + icm + "<br>" + "Sobrepeso");
+			}else if(icm <= 29.9){
+				document.write("ICM = " + icm + "<br>" + "Obesidad");
+			}else if(icm <= 39.9){
+				document.write("ICM = " + icm + "<br>" + "Obesidad gado II");
+			}else if(icm > 40){
+				document.write("ICM = " + icm + "<br>" + "Obesidad gado III Extrema o Mórbida");
+			}
+		}
+
+		peso = prompt("Introduce tu peso: ", "Kg");
+		peso = parseFloat(peso);
+		altura = prompt("Introduce tu altura: ", "m,cm");
+		altura = parseFloat(altura);
+		sobrepeso(peso,altura);
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Array</title>
+	<script type="text/javascript">
+
+		//Día
+		var dia = prompt('Introduce el número del día: ', '1-31');
+		var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+		while (isNaN(dia) || dia == "" || dia <= 0 || dia > 31) {
+			alert("Eso no es un número del 1 al 31");
+			var dia = prompt('Introduce el número del día: ', '1-31');
+		}
+		dia = parseInt(dia);
+		
+		//Mes
+		var mes = prompt('Introduce el número del mes: ', '1-12');
+
+		while(isNaN(mes) || mes == "" || mes <= 0 || mes > 12){
+			alert("Eso no es un número del 1 al 12");
+			var mes = prompt('Introduce el número del mes: ', '1-12');
+		}
+		mes = parseInt(mes);
+		mes = mes -1;
+
+		//Año
+
+		var ano = prompt('Introduce el año: ', '');
+
+		while(isNaN(ano) || ano == "" || ano < 1000) {
+			alert("No es un número o no es un año válido (+ de 1000)");
+			var ano = prompt('Introduce el año: ', '');
+		}
+
+		//Imprimir
+
+		document.write("El día seleccionado es: <br>");
+		document.write(dia + " de " + meses[mes] + " de " + ano);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Cinco</title>ç
+	<script type="text/javascript">
+		var numero1, numero2, numero3;
+
+		numero1 = prompt('Introduce un número: ', '');
+		numero2 = prompt('Introduce un segundo número: ', '');
+		numero3 = prompt('Introduce un último número: ', '');
+
+		if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+			alert("Algún carácter no es un número...");
+		}
+
+		if (numero1 > numero2 && numero1 > numero3) {
+			document.write("El número mas alto es el primero: " + numero1);
+		}else{
+			if (numero2 > numero3) {
+				document.write("El número mas alto es el segundo: " + numero2);
+			}else {
+				document.write("El número mas alto es el tercero: " + numero3);
+			}
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
